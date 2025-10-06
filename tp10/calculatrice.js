@@ -48,6 +48,8 @@ function permute() {
     
     var a = document.getElementById("t1").value;
     var b = document.getElementById("t2").value;
+    document.getElementById("t1").value = b;
+    document.getElementById("t2").value = a;
 
 }
 
