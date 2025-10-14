@@ -1,0 +1,32 @@
+div.container {
+    display:block;
+    height:185px;
+}
+.tr{
+    float: left;
+}
+.tt{
+    float: right;
+}
+.ty{
+    float: right;
+    margin-right: 500px;
+}
+div.ext1{
+    display: block;
+    height: 230px;;
+}
+div.ext2{
+    display: block;
+    height: 230px;
+}
+div.ext3{
+    display: block;
+    height: 230px;
+}
+.tx{
+    float: right;
+    margin-right: 400px;
+}
+
+
