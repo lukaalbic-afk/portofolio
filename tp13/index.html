@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facture Exemple</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="invoice-container">
+<header>
+<img src="Apple-logo.png" alt="Logo Apple" class="logo">
+<div class="invoice-info">
+<p><strong>Date création :</strong> 15/11/22</p>
+<p><strong>N° Facture :</strong></p>
+</div>
+</header>
+
+<section class="addresses">
+<div class="destinataire">
+<h3>Destinataire</h3>
+<p>Nom<br>Nom de la société<br>Adresse Postale<br>Téléphone<br>Email</p>
+</div>
+<div class="envoyer-a">
+<h3>Envoyer à</h3>
+<p>Nom<br>Nom de la société<br>Adresse Postale<br>Téléphone<br>Email</p>
+</div>
+</section>
+
+<section class="table-section">
+<table>
+<thead>
+<tr>
+<th>Article :</th>
+<th>Quantité :</th>
+<th>Prix :</th>
+<th>Résultat :</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e1</td>
+<td><input type="number" id="q1" value="12"></td>
+<td><input type="number" id="p1" value="4"></td>
+<td><span id="r1">48</span></td>
+</tr>
+<tr>
+<td>e2</td>
+<td><input type="number" id="q2" value="4"></td>
+<td><input type="number" id="p2" value="4"></td>
+<td><span id="r2">16</span></td>
+</tr>
+<tr>
+<td>e3</td>
+<td><input type="number" id="q3" value="12"></td>
+<td><input type="number" id="p3" value="5"></td>
+<td><span id="r3">60</span></td>
+</tr>
+</tbody>
+</table>
+
+<div class="buttons">
+<button id="reset">réinitialiser</button>
+<button id="calculate">résultat</button>
+</div>
+
+<div class="total">
+<p><strong>Total :</strong> <span id="total">124</span></p>
+</div>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
