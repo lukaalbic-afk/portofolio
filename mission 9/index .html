@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>QCM Autoformation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <h1>QCM - Autoformation</h1>
+
+    <form id="qcm">
+
+        
+        <div class="question">
+            <p>1. Quel langage structure une page web ?</p>
+            <label><input type="radio" name="q1" value="HTML"> HTML</label>
+            <label><input type="radio" name="q1" value="CSS"> CSS</label>
+            <label><input type="radio" name="q1" value="PHP"> PHP</label>
+        </div>
+
+        
+        <div class="question">
+            <p>2. Quelle propriété CSS change la couleur du texte ?</p>
+            <label><input type="radio" name="q2" value="color"> color</label>
+            <label><input type="radio" name="q2" value="text-color"> text-color</label>
+            <label><input type="radio" name="q2" value="font-color"> font-color</label>
+        </div>
+
+        
+        <div class="question">
+            <p>3. JavaScript sert à :</p>
+            <label><input type="checkbox" name="q3" value="interact"> Rendre une page interactive</label>
+            <label><input type="checkbox" name="q3" value="style"> Styliser une page</label>
+            <label><input type="checkbox" name="q3" value="structure"> Structurer une page</label>
+        </div>
+
+        
+        <div class="question">
+            <p>4. Git permet de :</p>
+            <label><input type="checkbox" name="q4" value="version"> Gérer les versions</label>
+            <label><input type="checkbox" name="q4" value="heberge"> Héberger des vidéos</label>
+            <label><input type="checkbox" name="q4" value="collab"> Travailler à plusieurs</label>
+        </div>
+
+        
+        <div class="question">
+            <p>5. Github est :</p>
+            <label><input type="radio" name="q5" value="hebergecode"> Une plateforme d'hébergement de code</label>
+            <label><input type="radio" name="q5" value="reseau"> Un réseau social professionnel</label>
+            <label><input type="radio" name="q5" value="jeu"> Un site de jeux vidéo</label>
+        </div>
+
+        
+        <div class="question">
+            <p>6. Quel est le système d’exploitation développé par Microsoft ?</p>
+            <label><input type="radio" name="q6" value="windows"> Windows</label>
+            <label><input type="radio" name="q6" value="linux"> Linux</label>
+            <label><input type="radio" name="q6" value="macos"> macOS</label>
+        </div>
+        
+        <div class="question">
+            <p>7. Que signifie CSS ?</p>
+            <label><input type="radio" name="q7" value="cascading"> Cascading Style Sheets</label>
+            <label><input type="radio" name="q7" value="creative"> Creative Style System</label>
+        </div>
+
+        
+        <div class="question">
+            <p>8. Quelle commande Git enregistre les modifications ?</p>
+            <label><input type="radio" name="q8" value="commit"> git commit</label>
+            <label><input type="radio" name="q8" value="save"> git save</label>
+        </div>
+
+        
+        <div class="question">
+            <p>9. Quel fichier contient les informations d’un dépôt Git ?</p>
+            <label><input type="radio" name="q9" value="gitignore"> .gitignore</label>
+            <label><input type="radio" name="q9" value="git"> dossier .git</label>
+        </div>
+
+        
+        <div class="question">
+            <p>10. Le JavaScript s'exécute :</p>
+            <label><input type="radio" name="q10" value="client"> Côté client</label>
+            <label><input type="radio" name="q10" value="serveur"> Côté serveur uniquement</label>
+        </div>
+
+        
+        <div class="buttons">
+            <button type="button" onclick="testqcm()">Correction</button>
+            <button type="button" onclick="corrige()">Corrigé</button>
+            <button type="reset">Effacer</button>
+        </div>
+
+        <p id="resultat"></p>
+    </form>
+</body>
+</html>
