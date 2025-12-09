@@ -1,0 +1,112 @@
+:root {
+    --accent: #2b6cb0;
+    --muted: #666;
+    --page-bg: #f3f6fb;
+    --card-bg: #fff;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--page-bg);
+    padding: 24px;
+    margin: 0;
+  }
+  
+  .container {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  .small-muted {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  
+  button {
+    background: var(--accent);
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button.secondary {
+    background: #e2e8f0;
+    color: black;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .invoice {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .invoice th {
+    text-align: left;
+    padding: 10px;
+    background: #f7fafc;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .invoice td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e0;
+    box-sizing: border-box;
+  }
+  
+  .right {
+    text-align: right;
+  }
+  
+  .total-cell {
+    width: 100px;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  
+  @media print {
+    .controls,
+    footer,
+    .meta {
+      display: none;
+    }
+  }

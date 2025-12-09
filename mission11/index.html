@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Module de facturation - Mission 11</title>
+
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container" role="main">
+    <header>
+      <div>
+        <h1>Laboratoire GSB — Module de facturation</h1>
+        <div class="small-muted">Mission 11 — Module automatisé</div>
+      </div>
+
+      <div class="meta">
+        <div id="invoice-info">Facture : <span id="invoice-number">#0001</span></div>
+        <div class="small-muted" id="date-info"></div>
+      </div>
+    </header>
+
+    
+    <section class="controls">
+      <button id="add-line">➕ Ajouter une ligne</button>
+      <button id="auto-fill" class="secondary">⚡ Remplir automatiquement</button>
+      <button id="calculate">✅ Calculer</button>
+      <button id="print" class="secondary">🖨️ Imprimer</button>
+    </section>
+
+    
+    <section class="form-row">
+      <div>
+        <label for="remise">Remise (%)</label><br>
+        <input id="remise" type="number" min="0" max="100" step="0.01" value="0" />
+      </div>
+      <div>
+        <label for="taux-tva">Taux d'imposition (%)</label><br>
+        <input id="taux-tva" type="number" min="0" max="100" step="0.01" value="20" />
+      </div>
+      <div>
+        <label for="frais">Frais d'expédition (€)</label><br>
+        <input id="frais" type="number" min="0" step="0.01" value="0" />
+      </div>
+    </section>
+
+    
+    <section aria-label="Tableau facture">
+      <table class="invoice">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th class="right">Quantité</th>
+            <th class="right">Prix unitaire (€)</th>
+            <th class="right">Total ligne (€)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="invoice-body">
+
+        
+          <tr class="line model" data-model style="display:none;">
+            <td><input type="text" class="desc" /></td>
+            <td class="right"><input type="number" class="qte" min="1" value="1" /></td>
+            <td class="right"><input type="number" class="prix" min="0" value="0.00" /></td>
+            <td class="right total-cell"><span class="total">0.00</span></td>
+            <td><button class="remove-line secondary">Supprimer</button></td>
+          </tr>
+
+        
+          <tr class="line">
+            <td><input type="text" class="desc" value="Produit A"></td>
+            <td class="right"><input type="number" class="qte" value="2"></td>
+            <td class="right"><input type="number" class="prix" value="15.00"></td>
+            <td class="right total-cell"><span class="total">0.00</span></td>
+            <td><button class="remove-line secondary">Supprimer</button></td>
+          </tr>
+
+          <tr class="line">
+            <td><input type="text" class="desc" value="Produit B"></td>
+            <td class="right"><input type="number" class="qte" value="1"></td>
+            <td class="right"><input type="number" class="prix" value="30.00"></td>
+            <td class="right total-cell"><span class="total">0.00</span></td>
+            <td><button class="remove-line secondary">Supprimer</button></td>
+          </tr>
+
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3" class="label right">Sous-total (€)</td>
+            <td class="right" id="subtotal">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="label right">Sous-total - Remise (€)</td>
+            <td class="right" id="subtotal-apres-remise">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="label right">Taxe Totale (€)</td>
+            <td class="right" id="taxe-totale">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="label right">Frais d'expédition (€)</td>
+            <td class="right" id="frais-affiche">0.00</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3" class="label right">Solde Total (€)</td>
+            <td class="right" id="solde-total">0.00</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <footer class="small-muted">
+      Lignes générées automatiquement via JavaScript — Fonction insertBefore() et clonage du modèle.
+    </footer>
+  </div>
+
+  
+  <script src="app.js"></script>
+
+</body>
+</html>
